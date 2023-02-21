@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+    <title>NewKicks/landing page</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+    .background-image {
+  background-image: url('https://wallpaperaccess.com/full/4787963.jpg'); /* replace with the actual path to your image */
+  background-size: cover;
+  height: 109vh; /* adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.text-overlay {
+  position: absolute; /* added to position the text within the background-image div */
+  color: rgb(9, 9, 9); /* added to change the text color */
+  text-align: center; /* added to center the text horizontally */
+  padding: 0 20px; /* added to give some space around the text */
+}
+
+.text-overlay h1 {
+  font-size: 10rem; /* added to make the heading bigger */
+  margin-bottom: 20px; /* added to give some space between the heading and the paragraph */
+}
+
+.text-overlay p {
+  font-size: 2rem; /* added to make the paragraph text smaller */
+}
+
+.cta-button {
+  background-color: #333; /* added to change the button color */
+  color: white; /* added to change the button text color */
+  padding: 10px 20px; /* added to give some space around the button text */
+  border-radius: 5px; /* added to give the button rounded corners */
+  text-decoration: none; /* added to remove the underline from the button text */
+  margin-top: 20px; /* added to give some space between the button and the paragraph */
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
+body {
+  font-family: 'Rowdies', cursive;
+  font-weight: 300;
+  line-height: 1.6; 
+  background-color:white;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #000000;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #000000;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+
+}
+.btn btn-outline-success{
+  width:10px;
+  height: 20px;
+}
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">NewKicks</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Menu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="background-image">
+        <div class="text-overlay">
+          <h1>Welcome to my website <br>find Your Kicks
+          </h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati id est tenetur fuga ab odio ea, facilis perspiciatis asperiores </p>
+          <a href="#" class="cta-button">Shop Now</a>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b912a441-e3fb-49f2-94ad-6e5b21f3def0/air-jordan-2-retro-low-sp-shoes-Ljl0CW.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b>Air jordan 1 Mid SE</b></h5>
+              <p class="card-text">RS.150000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b0dcd29c-9fe8-44fd-9b4d-a821cea0cacb/air-jordan-1-mid-shoes-SQf7DM.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b>Air jordan 1 Retro </b></h5>
+              <p class="card-text">RS.16000</p>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/14c94550-ca1f-4de6-90cf-e7a1e2e49df0/air-jordan-1-mid-se-shoes-hHltxp.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b>Air jordan 1 Mid </b></h5>
+              <p class="card-text">RS.11000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/689bf39a-6e96-4a55-adbc-0cbc8fe387d5/air-jordan-1-mid-shoes-86f1ZW.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b>Air jordan 1 retro High OG</b></h5>
+              <p class="card-text">RS.10000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/86576d60-d8c5-490c-b02a-17081a537bbe/air-jordan-1-mid-se-shoes-KZSCnR.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b>Air jordan 1 Mid SE</b></h5>
+              <p class="card-text">RS.12000</p>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/dc9efa13-9572-490e-afa9-4c5b8e25187a/air-jordan-1-mid-se-shoes-pZbfP8.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b> Air jordan 1 Mid Titan </b></h5>
+              <p class="card-text"><b> RS.20000</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>About</h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                |
+                <a href="#">Blog</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="#">Contact</a>
+            </p>
+
+            <p class="footer-company-name">© 2023 Newkicks  Pvt. Ltd.</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                  <p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime perspiciatis animi dolor ipsum, </p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 22-27782183</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@eduonix.com">support@NewKicks.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi recusandae dicta corporis numquam laudantium consectetur nobis qui dolor unde? Earum natus molestiae eum sequi laborum eos maiores dolor dignissimos nulla.</p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
